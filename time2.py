@@ -1,0 +1,5 @@
+h1,m1=input().split()
+h2,m2=input().split()
+mins=abs(int(m1) - int(m2))
+hours=abs(int(h1) - int(h2))
+print(hours,mins)
