@@ -1,0 +1,36 @@
+#Sort it up
+
+# arr=[2,0,1,0,2]
+arr=list(map(int, input().split()))
+n=len(arr)
+def inplaceSorting_O_n2(arr):
+    for i in range(0,n):
+        for j in range(i+1, n):
+            if arr[i]>arr[j]:
+                temp=arr[j]
+                arr[j]=arr[i]
+                arr[i]=temp
+    return arr
+
+def inplaceSorting_O_n(arr):
+    n=len(arr)
+    start=0
+    end=n-1
+    current=0
+    while current<=end:
+        if arr[current]==2:
+            arr[current]=arr[end]
+            arr[end]=2
+            end=end-1
+        elif arr[current]==0:
+            arr[current]=arr[start]
+            arr[start]=0
+            start=start+1
+            current=current+1
+        else:
+            current=current+1
+    return arr
+    
+            
+print(inplaceSorting_O_n2(arr))  
+print(inplaceSorting_O_n(arr))
