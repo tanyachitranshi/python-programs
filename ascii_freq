@@ -1,0 +1,20 @@
+# arr=["bag", "sfe", "cbh", "cbh", "red"]
+arr=["corn", "horn", "dpso", "eqtp", "corn"]
+count=0
+def get_freq(new_word):
+    global count
+    for i in range(0, len(arr)):
+        print(new_word, arr[i])
+        if new_word == arr[i]:
+            count=count+1
+
+for i in arr:
+    get_ascii=list(i)
+    print("word", i)
+    l=[]
+    for x in get_ascii:
+        word=chr(ord(x)+1)
+        l.append(word)
+    new_word="".join(l)
+    get_freq(new_word)
+print(count)
